@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby's Hub - General Store</title>
+  <style>
+    body {
+      background-color: #f2e9d4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 2rem auto 1rem auto;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .leadership-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #f09c86;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .module {
+      border: 2px solid #f09c86;
+      border-radius: 12px;
+      background-color: #ffffff;
+      overflow: hidden;
+      text-decoration: none;
+      color: black;
+    }
+
+    .module iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .module-title {
+      padding: 0.75rem;
+      background-color: #f09c86;
+      color: black;
+      font-weight: bold;
+    }
+
+    .chat-buttons {
+      margin-bottom: 2rem;
+    }
+
+    .chat-button {
+      background-color: #f09c86;
+      color: black;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 900px) {
+      .module-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script>
+    function goToLeadershipPage() {
+      const password = prompt("Enter password to access Leadership Resources:");
+      if (password === "sakeslush2025") {
+        window.location.href = "leadership.html";
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button class="leadership-btn" onclick="goToLeadershipPage()">Leadership Resources</button>
+  <img src="logo_centered.png" alt="Baby's Hub Logo" class="logo" />
+
+  <div class="module-grid">
+    <a class="module" href="https://calendar.google.com/calendar/u/0?cid=ZDA1MTkyOTdmMzliNzkwMDY3ZDBlZDlhZGI1YWZmNjM4OGE2ZWY0NGZjMDRiNTY0NTVjNzQ1MmYxNDNlZDBhOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">
+      <iframe src="https://calendar.google.com/calendar/embed?src=ZDA1MTkyOTdmMzliNzkwMDY3ZDBlZDlhZGI1YWZmNjM4OGE2ZWY0NGZjMDRiNTY0NTVjNzQ1MmYxNDNlZDBhOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&ctz=America%2FNew_York"></iframe>
+      <div class="module-title">General Calendar</div>
+    </a>
+
+    <div class="module">
+      <iframe style="background-color:#f2e9d4;"></iframe>
+      <div class="module-title">Staff Handbook</div>
+    </div>
+
+    <a class="module" href="https://forms.gle/JNDuBBSHp4U9Ltgp8" target="_blank">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezRCVsI1DrVNenQC2RWVeCkMuFdlzBjEnuMXyj-piKPfh2qw/viewform?embedded=true"></iframe>
+      <div class="module-title">Idea Suggestion Form</div>
+    </a>
+
+    <a class="module" href="https://docs.google.com/spreadsheets/d/1EIKYTlnVqMDlGFC4z3bRRp2Ub3F9eCG_LAS3nMdVGlM/edit?usp=sharing" target="_blank">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfdCiCKfX1N29-tn0x_vofWqHZpWlecy5nUXlgInS6etVA1QAJdOE6A-XeEt09L_6loU6X3thHtmbD/pubhtml?widget=true&amp;headers=false"></iframe>
+      <div class="module-title">Event/Project Tracker</div>
+    </a>
+
+    <a class="module" href="https://docs.google.com/spreadsheets/d/1bng3CXE5pD2mkGGBOUAply7-3VLBm_aj7S5EaCXwJe8/edit?usp=sharing" target="_blank">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0BSGetjjFiVADt9lETzpmpK0jKa1THYT0-f3M4VLEvhvcitzxnOK7hZCFu4n-Rtn0_l2fgKhLIUkK/pubhtml?widget=true&amp;headers=false"></iframe>
+      <div class="module-title">Shift Schedule</div>
+    </a>
+  </div>
+
+  <div class="chat-buttons">
+    <a class="chat-button" href="https://chat.google.com/room/AAQAalv6zQY?cls=7" target="_blank">General Chat</a>
+    <a class="chat-button" href="https://chat.google.com/room/AAQAkSWhR14?cls=7" target="_blank">Event Chat</a>
+  </div>
+</body>
+</html>
